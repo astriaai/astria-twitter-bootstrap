@@ -1,0 +1,21 @@
+form.new_prompt {
+  .prompt_tune_id {
+    label {
+      display: none;
+    }
+  }
+}
+
+.prompt {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.prompt-text {
+  max-height: 8rem;
+}
+.prompt-video {
+  .prompt-text {
+    margin-bottom: 1.5rem;
+  }
+}

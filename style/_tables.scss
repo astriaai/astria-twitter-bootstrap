@@ -1,0 +1,24 @@
+th {
+  font-size: .6875rem;
+  text-transform: uppercase;
+  font-weight: $font-weight-medium;
+  padding: $table-cell-padding-y $table-cell-padding-x;
+}
+.table > :not(:first-child) {
+  border-top: $table-border-width solid $table-border-color;
+}
+
+table.table-hover tbody {
+  cursor: pointer;
+}
+
+table.table-hover tbody tr td:first-child {
+  font-weight: $font-weight-medium;
+}
+
+td {
+  max-width: 30rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

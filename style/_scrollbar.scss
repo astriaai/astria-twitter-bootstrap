@@ -1,0 +1,45 @@
+@media screen {
+  .scrollable-y-with-hide {
+    overflow-y: hidden;
+    &:hover {
+      overflow-y: auto;
+      // https://stackoverflow.com/a/54979559/375050
+      // only for WebKit so that scrollbars do not take space and cause content to overflow
+      overflow-y: overlay;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: hsla(0, 0%, 0%, 0.4);
+    }
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+
+  }
+  .scrollable-x-with-hide {
+    overflow-x: hidden;
+    &:hover {
+      overflow-x: auto;
+      overflow-y: hidden; // when scroll back shows up, a vertical scroll will show too
+      // https://stackoverflow.com/a/54979559/375050
+      // only for WebKit so that scrollbars do not take space and cause content to overflow
+      overflow-x: overlay;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: hsla(0, 0%, 0%, 0.4);
+    }
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+
+  }
+}
+
+.dark-scrollbar {
+  &::-webkit-scrollbar-thumb {
+    background: hsla(100, 100%, 100%, 0.4);
+  }
+}

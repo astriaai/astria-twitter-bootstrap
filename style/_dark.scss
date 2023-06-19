@@ -1,0 +1,136 @@
+// Bootstrap 5.2 CSS variables for dark theme
+$dark-white: $black;
+$dark-mid-white: rgba(255, 255, 255, 0.8);
+$dark-black: $white;
+$dark-body-color: #ffffffc9;
+$dark-body-bg: #000;
+$dark-border-color: $white;
+$dark-border-color-translucent: rgba($white, 0.8);
+$dark-headings-color: $white;
+$dark-link-color: #4696ff;
+$dark-link-hover-color: #5daefd;
+$dark-code-color: $code-color;
+$dark-mark-bg: $mark-bg;
+$dark-nav-link-color: rgba($white, 1);
+$dark-nav-link-hover-color: $white;
+$dark-nav-link-disabled-color: rgba($white, 0.9);
+$dark-navbar-light-color: rgba($white, 1);
+$dark-navbar-light-hover-color: rgba($white, 1);
+$dark-navbar-light-disabled-color: $navbar-dark-disabled-color;
+$dark-navbar-light-active-color: $navbar-dark-active-color;
+$dark-navbar-light-brand-color: $navbar-dark-brand-color;
+$dark-navbar-light-brand-hover-color: $navbar-dark-brand-hover-color;
+$dark-navbar-light-toggler-border-color: $navbar-dark-toggler-border-color;
+
+.dark-theme {
+  // Note: Custom variable values only support SassScript inside `#{}`.
+
+  --#{$prefix}white: #{to-rgb($dark-white)};
+  --#{$prefix}black: #{to-rgb($dark-black)};
+  // Colors
+  //
+  // Generate palettes for full colors, grays, and theme colors.
+
+  //@each $color, $value in $colors {
+  //  --#{$prefix}#{$color}: #{$value};
+  //}
+  //
+  //@each $color, $value in $grays {
+  //  --#{$prefix}gray-#{$color}: #{$value};
+  //}
+  //
+  //@each $color, $value in $theme-colors {
+  //  --#{$prefix}#{$color}: #{$value};
+  //}
+  //
+  //@each $color, $value in $theme-colors-rgb {
+  //  --#{$prefix}#{$color}-rgb: #{$value};
+  //}
+
+  --#{$prefix}white-rgb: #{to-rgb($dark-white)};
+  --#{$prefix}black-rgb: #{to-rgb($dark-black)};
+  --#{$prefix}body-color-rgb: #{to-rgb($dark-body-color)};
+  --#{$prefix}body-bg-rgb: #{to-rgb($dark-body-bg)};
+
+  --#{$prefix}body-color: #{$dark-body-color};
+
+  --#{$prefix}body-bg: #{$dark-body-bg};
+  // scss-docs-end root-body-variables
+
+  // scss-docs-start root-border-var
+  --#{$prefix}border-color: #{$dark-border-color};
+  --#{$prefix}border-color-translucent: #{$dark-border-color-translucent};
+
+  --#{$prefix}heading-color: #{$dark-headings-color};
+  --#{$prefix}link-color: #{$dark-link-color};
+  --#{$prefix}link-hover-color: #{$dark-link-hover-color};
+  --#{$prefix}code-color: #{$dark-code-color};
+  --#{$prefix}highlight-bg: #{$dark-mark-bg};
+
+  .btn {
+    --#{$prefix}btn-color: #{$dark-body-color};
+  }
+  .btn-link {
+    --bs-btn-color: #{$dark-link-color};
+    --bs-btn-hover-color: #{$dark-link-hover-color};
+    --bs-btn-active-color: #{$dark-link-hover-color};
+  }
+  .btn-secondary {
+    --bs-btn-color: #ffffffb5;
+    --bs-btn-hover-color: #ffffffb5;
+    --bs-btn-active-color: rgba(255, 255, 255, 0.84);
+    --bs-btn-hover-bg: rgba(61, 68, 86, var(--bs-bg-opacity, 1));
+    --bs-btn-active-bg: rgba(61, 68, 86, var(--bs-bg-opacity, 1));
+    --bs-btn-bg: rgba(47, 53, 70, var(--bs-bg-opacity, 1));
+    --bs-btn-disabled-bg: rgba(61, 68, 86, 0.2);
+    --bs-btn-disabled-color: rgba(255, 255, 255, 0.7);
+    --bs-btn-border-color: rgba(47, 53, 70, var(--bs-bg-opacity, 1));
+    --bs-btn-active-border-color: rgba(47, 53, 70, var(--bs-bg-opacity, 1));
+    --bs-btn-hover-border-color: rgba(47, 53, 70, var(--bs-bg-opacity, 1));
+    --bs-btn-disabled-border-color: rgba(47, 53, 70, var(--bs-bg-opacity, 1));
+  }
+  .nav {
+    --#{$prefix}nav-link-color: #{$dark-nav-link-color};
+    --#{$prefix}nav-link-hover-color: #{$dark-nav-link-hover-color};
+    --#{$prefix}nav-link-disabled-color: #{$dark-nav-link-disabled-color};
+  }
+  .navbar-brand {
+    color: $white;
+  }
+  .navbar {
+    --#{$prefix}navbar-color: #{$dark-navbar-light-color};
+    --#{$prefix}navbar-hover-color: #{$dark-navbar-light-hover-color};
+    --#{$prefix}navbar-disabled-color: #{$dark-navbar-light-disabled-color};
+    --#{$prefix}navbar-active-color: #{$dark-navbar-light-active-color};
+    --#{$prefix}navbar-brand-color: #{$dark-navbar-light-brand-color};
+    --#{$prefix}navbar-brand-hover-color: #{$dark-navbar-light-brand-hover-color};
+    --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+    --#{$prefix}navbar-toggler-border-color: #{$dark-navbar-light-toggler-border-color};
+
+  }
+  .card {
+    --#{$prefix}card-bg: #{$dark-white};
+    --#{$prefix}card-color: #{$dark-black};
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: $white;
+  }
+
+  #main-navigation {
+    background-color: rgba(29, 29, 31, 0.72);
+    border-bottom: 1px solid #333;
+  }
+  .text-muted {
+    color: $dark-mid-white !important;
+  }
+  .tag .text-muted {
+    color: rgba(0,0,0,0.5) !important;
+  }
+  footer {
+    color: $dark-mid-white;
+    a {
+      color: $dark-mid-white;
+    }
+  }
+}

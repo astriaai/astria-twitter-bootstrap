@@ -1,0 +1,44 @@
+.btn {
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.25rem;
+    flex-shrink: 0;
+    &:first-child {
+      margin-left: -2px;
+    }
+  }
+  &.btn-icon {
+    .icon {
+      margin-right: 0;
+    }
+  }
+  .spinner-border {
+    margin-bottom: -2px;
+    margin-right: .5rem;
+  }
+}
+
+.btn-sm {
+  .icon {
+    // Specific to Hero icons
+    margin-top: -5px;
+  }
+}
+.btn-primary .spinner-border { color: #fff; }
+
+.btn-sm {
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+// Space icon from header
+.btn + span {
+  margin-left: .5rem;
+}
+.btn + .btn {
+  margin-left: .5rem;
+}
+

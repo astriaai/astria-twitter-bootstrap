@@ -1,0 +1,28 @@
+.alert {
+  border-width: 4px 0 0 0;
+  color: $body-color;
+  h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: $font-weight-semibold;
+  }
+}
+.alert-success {
+  border-color: #50B83C;
+  background-color: #E0F2DC;
+}
+
+.alert-danger {
+  background-color: #E9D0CD;
+  border-color: #E5613E;
+}
+
+.alert-warning {
+  background-color: #FCF4D1;
+  border-color: #EEC200;
+}
+
+.alert-info {
+  background-color: #b9c9ff;
+  border-color: #8e99c2;
+}

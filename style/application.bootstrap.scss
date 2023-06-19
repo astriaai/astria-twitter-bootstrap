@@ -1,0 +1,128 @@
+@import './variables.scss';
+@import 'bootstrap/scss/bootstrap';
+
+@import './SideNavigation';
+@import './Form';
+@import './util';
+@import './card';
+@import './alert';
+@import './buttons';
+@import './scrollbar';
+@import './tables';
+@import './utilities';
+@import './badge';
+@import './MainNavigation';
+@import './Homepage';
+@import './feed';
+@import './professionals';
+@import './examples_page';
+@import './UsersEdit';
+@import './dark';
+@import './tunes';
+@import './prompts';
+@import './statics';
+
+$sidenav-width: 72px;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body, input, textarea, select, button {
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  white-space: break-spaces;
+}
+
+.pre {
+  white-space: break-spaces;
+}
+
+#main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#side-navigation + #main-content {
+  margin-left: $sidenav-width;
+}
+
+@media screen {
+  @include media-breakpoint-up(sm) {
+    .stretch-height {
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: auto; // default
+      flex-direction: column;
+      //background-color: rgba(0,0,0,0.1);
+    }
+    .stretch-height-base0 {
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      flex-direction: column;
+      //background-color: rgba(0,0,0,0.1);
+      .btn-custom{
+        width: 31px !important;
+        height: 26px !important;
+        border: 1px solid $secondary !important;
+        &.active {
+          background-color: $gray-300 !important;
+
+        }
+        &.btn-secondary:not(:disabled):not(.disabled).active .icon, .btn-secondary.active .icon{
+          fill: $secondary !important;
+          color: $secondary !important;
+        }
+      }
+    }
+  }
+
+  //  @include media-breakpoint-down(sm) {
+  //    .stretch-height, .stretch-height-base0 {
+  //      display: flex;
+  //      flex-basis: calc(100vh - #{$navbar-height});
+  //      flex-grow: 1;
+  //      flex-shrink: 1;
+  //      flex-direction: column;
+  //    }
+  //  }
+}
+
+.icon {
+  width: 1rem;
+  height: 1.5rem; // Match line-height
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.spinner-border { color: $text-muted;}
+
+.container-narrow {
+  max-width: 960px
+}
+
+.container-vnarrow {
+  max-width: 540px
+}
+
+.container-mnarrow {
+  max-width: 720px
+}
+
+
+footer {
+  a {
+    color: #777;
+  }
+  .rights {
+    margin-top: 3rem;
+  }
+}

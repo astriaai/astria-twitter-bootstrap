@@ -1,0 +1,40 @@
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-gradient-lime {
+  background-image: linear-gradient(22deg, #f1c73f 23%, #77bd0c 87%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-indigo-red {
+  background-image: linear-gradient(207deg, #e23b3b 23%, #6668eb 87%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-indigo {
+  background-image: linear-gradient(351deg, #31b3ec 23%, #524add 87%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-amber {
+  background-image: linear-gradient(191deg, #f1dc39 25%, #c96e05 87%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-pink-purple {
+  background-image: linear-gradient(321deg, #b77cf1 23%, #e22a7c 87%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

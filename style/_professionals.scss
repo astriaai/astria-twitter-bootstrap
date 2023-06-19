@@ -1,0 +1,103 @@
+.action-professionals.controller-static {
+  .video-carousel {
+    .carousel-item {
+      text-align: center;
+      font-size: 1rem;
+      height: 680px;
+      .carousel-caption {
+        pointer-events: none;
+        padding-bottom: 4rem;
+      }
+      video, iframe, img {
+        height: 680px;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      // mobile portrait
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        height: 400px;
+        video, iframe, img {
+          height: 400px;
+        }
+      }
+    }
+    .carousel-caption {
+      // vertical gradient black to transparent
+      --circle-gradient: radial-gradient( circle 2260px at 5% 118%, rgba(0, 0, 0, 0.7) 11%, rgba(0, 0, 0, 0) 26%, transparent 100% );
+      --linear-gradient: linear-gradient( rgba(0, 0, 0, 0) 88%, rgba(0, 0, 0, 0.7) 100% );
+      background-image: var(--circle-gradient),var(--linear-gradient);
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      display: flex;
+      justify-content: end;
+      align-items: start;
+      padding-left: 2rem;
+    }
+  }
+  .img-col img {
+    background: none;
+  }
+  .text-col {
+    padding: 5rem 2rem;
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      margin-bottom: 3rem;
+    }
+  }
+  h3 {
+    font-size: 1rem;
+    color: white;
+  }
+  .active-item {
+    height: 400px;
+  }
+  .testimonials {
+    .carousel-item {
+      overflow: hidden;
+      .row {
+        padding: 0;
+      }
+      background-color: rgba(255,255,255,.1);
+      border-radius: 37px;
+    }
+    .text-col {
+      justify-content: end;
+    }
+    .img-col {
+      @media (min-width: map-get($grid-breakpoints, sm)) {
+        justify-content: left;
+      }
+      max-height: 301px;
+      img {
+        max-height: 276px;
+        width: auto;
+      }
+    }
+  }
+  .the-process {
+    .card {
+      height: 100%;
+      &.card-white {
+        background-color: rgba(255,255,255,0.10);
+        .card-body, h2 {
+          //color: black;
+        }
+      }
+    }
+  }
+}
+
+.carousel-indicators {
+  [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,7 @@
+.controller-static {
+  h2 {
+    @extend .display-2;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
